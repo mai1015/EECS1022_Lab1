@@ -33,18 +33,22 @@ public class Lab1Activity extends AppCompatActivity
     }
 
     public void computeBMIButtonClicked(View view) {
+        // get user informations
         String name = getInputById(R.id.inputName);
         double height = Double.parseDouble(getInputById(R.id.inputHeight));
         double weight = Double.parseDouble(getInputById(R.id.inputWeight));
 
+        // check the unit
         if (getItemSelectedById(R.id.spinnerWeight).equals("Pounds"))
             weight = weight * 0.45359237;
 
         if (getItemSelectedById(R.id.spinnerHeight).equals("Inches"))
             height = height * 0.0254;
 
+        // calculate with model
         Person user = new Person(name, weight, height);
 
+        // show result
         setTextViewById(R.id.labelAnswer, user.toString());
     }
 }

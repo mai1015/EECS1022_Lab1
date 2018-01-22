@@ -36,6 +36,7 @@ public class Person {
     @Override
     public String toString()
     {
+        // format string
         String ret = String.format("%s's BMI is %.2f, Your state is %s", name, getBMI(), getState());
         return ret;
     }
