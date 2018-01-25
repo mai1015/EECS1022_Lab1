@@ -45,6 +45,9 @@ public class Lab1Activity extends AppCompatActivity
         if (getItemSelectedById(R.id.spinnerHeight).equals("Inches"))
             height = height * 0.0254;
 
+        if (getItemSelectedById(R.id.spinnerHeight).equals("Centimetre"))
+            height = height / 100;
+
         // calculate with model
         Person user = new Person(name, weight, height);
 
